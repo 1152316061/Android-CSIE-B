@@ -15,6 +15,7 @@ public class MedicineController {
     @RequestMapping(value = "/getMed",produces = "text/plain;charset=utf-8")
     @ResponseBody
     String getMedicine(String UID){
+        System.out.println("medicine++++++");
         return medicineService.getMedicineByUID(UID);
     }
 }

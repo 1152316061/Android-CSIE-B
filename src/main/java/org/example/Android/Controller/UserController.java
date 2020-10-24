@@ -17,8 +17,10 @@ public class UserController {
     @RequestMapping(value = "/login",produces = "text/plain;charset=utf-8")
     @ResponseBody
     public String login(String user){
-        User userObj = (User) JSON.parse(user);
+        User userObj = JSON.parseObject(user,User.class);
+        System.out.println(userObj.toString());
         String result = userService.getUserByObject(userObj);
-        return JSON.toJSONString(result);
+        System.out.println(result);
+        return result;
     }
 }
