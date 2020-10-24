@@ -1,5 +1,7 @@
 package org.example.Android.pojo;
 
+import java.util.Objects;
+
 public class Medicine {
 
     private String UID;
@@ -56,5 +58,21 @@ public class Medicine {
                 ", dosage='" + dosage + '\'' +
                 ", time='" + time + '\'' +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Medicine medicine = (Medicine) o;
+        return Objects.equals(UID, medicine.UID) &&
+                Objects.equals(mName, medicine.mName) &&
+                Objects.equals(dosage, medicine.dosage) &&
+                Objects.equals(time, medicine.time);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(UID, mName, dosage, time);
     }
 }

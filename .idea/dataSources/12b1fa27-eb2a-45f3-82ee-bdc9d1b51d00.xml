@@ -919,101 +919,124 @@ SELECT|sys.sys_config:null
     <table id="287" parent="2" name="goods"/>
     <table id="288" parent="2" name="hi"/>
     <table id="289" parent="2" name="loc"/>
-    <table id="290" parent="2" name="user"/>
-    <column id="291" parent="287" name="GID">
+    <table id="290" parent="2" name="medicine"/>
+    <table id="291" parent="2" name="user"/>
+    <column id="292" parent="287" name="GID">
       <Position>1</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="292" parent="287" name="name">
+    <column id="293" parent="287" name="name">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="293" parent="287" name="price">
+    <column id="294" parent="287" name="price">
       <Position>3</Position>
       <DataType>decimal(10,2 digit)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="294" parent="287" name="imgUrl">
+    <column id="295" parent="287" name="imgUrl">
       <Position>4</Position>
       <DataType>varchar(511)|0s</DataType>
     </column>
-    <key id="295" parent="287" name="PRIMARY">
+    <key id="296" parent="287" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>GID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="296" parent="288" name="UID">
+    <column id="297" parent="288" name="UID">
       <Position>1</Position>
       <DataType>varchar(16)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="297" parent="288" name="HR">
+    <column id="298" parent="288" name="HR">
       <Position>2</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="298" parent="288" name="SP">
+    <column id="299" parent="288" name="SP">
       <Position>3</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="299" parent="288" name="DP">
+    <column id="300" parent="288" name="DP">
       <Position>4</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="300" parent="288" name="date">
+    <column id="301" parent="288" name="date">
       <Position>5</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="301" parent="288" name="other">
+    <column id="302" parent="288" name="other">
       <Position>6</Position>
       <DataType>varchar(255)|0s</DataType>
     </column>
-    <column id="302" parent="289" name="UID">
+    <column id="303" parent="289" name="UID">
       <Position>1</Position>
       <DataType>varchar(16)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="303" parent="289" name="time">
+    <column id="304" parent="289" name="time">
       <Position>2</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="304" parent="289" name="longitude">
+    <column id="305" parent="289" name="longitude">
       <Position>3</Position>
       <DataType>float|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="305" parent="289" name="latitude">
+    <column id="306" parent="289" name="latitude">
       <Position>4</Position>
       <DataType>float|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="306" parent="290" name="UID">
+    <column id="307" parent="290" name="UID">
       <Position>1</Position>
       <DataType>varchar(16)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="307" parent="290" name="pwd">
+    <column id="308" parent="290" name="mName">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Collation>utf8_general_ci</Collation>
+    </column>
+    <column id="309" parent="290" name="dosage">
+      <Position>3</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Collation>utf8_general_ci</Collation>
+    </column>
+    <column id="310" parent="290" name="time">
+      <Position>4</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="311" parent="291" name="UID">
+      <Position>1</Position>
+      <DataType>varchar(16)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="312" parent="291" name="pwd">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="308" parent="290" name="address">
+    <column id="313" parent="291" name="address">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <Collation>utf8_general_ci</Collation>
     </column>
-    <column id="309" parent="290" name="phone">
+    <column id="314" parent="291" name="phone">
       <Position>4</Position>
       <DataType>char(16)|0s</DataType>
     </column>
-    <key id="310" parent="290" name="PRIMARY">
+    <key id="315" parent="291" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>UID</ColNames>
       <Primary>1</Primary>
