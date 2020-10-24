@@ -1,11 +1,14 @@
 package org.example.Android.pojo;
 
 public class Medicine {
+
+    private String UID;
     private String mName;
     private String dosage;
     private String time;
 
-    public Medicine(String mName, String dosage, String time) {
+    public Medicine(String UID, String mName, String dosage, String time) {
+        this.UID = UID;
         this.mName = mName;
         this.dosage = dosage;
         this.time = time;
@@ -37,10 +40,19 @@ public class Medicine {
         this.time = time;
     }
 
+    public String getUID() {
+        return UID;
+    }
+
+    public void setUID(String UID) {
+        this.UID = UID;
+    }
+
     @Override
     public String toString() {
         return "Medicine{" +
-                "mName='" + mName + '\'' +
+                "UID='" + UID + '\'' +
+                ", mName='" + mName + '\'' +
                 ", dosage='" + dosage + '\'' +
                 ", time='" + time + '\'' +
                 '}';

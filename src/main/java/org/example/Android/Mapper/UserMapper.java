@@ -8,4 +8,6 @@ import java.util.List;
 @Repository
 public interface UserMapper {
     List<User> getAllUsers();
+    User getUserByObject(User user);
+    void updateUserByObject(User user);
 }

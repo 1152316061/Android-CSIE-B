@@ -1,21 +1,19 @@
 package org.example.Android.Controller;
 
-import org.example.Android.Mapper.UserMapper;
+import org.example.Android.Service.GoodsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
-public class TestController {
+public class GoodsController {
     @Autowired
-    private UserMapper userMapper;
+    private GoodsService goodsService;
 
-    @RequestMapping("/test")
+    @RequestMapping(value = "/getAllGoods",produces = "text/plain;charset=utf-8")
     @ResponseBody
-    public String test(){
-        String t = userMapper.getAllUsers().get(0).toString();
-        System.out.println("====>>"+t);
-        return t;
+    public String getAllGoods(){
+        return goodsService.getAllGoods();
     }
 }

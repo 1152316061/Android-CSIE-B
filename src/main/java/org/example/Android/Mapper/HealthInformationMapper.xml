@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.example.Android.Mapper.HealthInformationMapper">
+    <select id="insertHI" parameterType="org.example.Android.pojo.HealthInformation">
+        insert into hi (UID, HR, SP, DP, date, other)
+            values (#{UID}, #{HR}, #{SP}, #{DP}, #{date}, #{other})
+    </select>
+    <select id="getHIByUID" parameterType="java.lang.String" resultType="org.example.Android.pojo.HealthInformation">
+        SELECT * from hi where UID = #{uid}
+    </select>
+</mapper>

@@ -5,4 +5,10 @@
     <select id="getAllUsers" resultType="org.example.Android.pojo.User">
         select * from user
     </select>
+    <select id="getUserByObject" resultType="org.example.Android.pojo.User" parameterType="org.example.Android.pojo.User">
+        select * from user where UID = #{uid} and pwd = #{pwd}
+    </select>
+    <select id="updateUserByObject" parameterType="org.example.Android.pojo.User">
+        update user set pwd = #{pwd} ,address = #{address} , phone = #{phone} where UID = #{UID}
+    </select>
 </mapper>
